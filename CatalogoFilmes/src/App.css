@@ -1,0 +1,378 @@
+/* Para este projeto optou-se em usar apenas um arquivo para estilização*/
+/*Import da fonte que será usada em todo o projeto */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*Reset configurações iniciais CSS*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Variáveis de cores e fontes do projeto */
+:root {
+  --primary-color: #0D0D0D;
+  --card-bg: #1A1A1A;
+  --secondary-color: #7A1A1A;
+  --accent-color: #5C0F0F;
+  --terciary-color: #D4AF37;
+  --hover-color: #F0D87C;
+  --text-light: #F0F0F0;
+  --font-main:'Montserrat', sans-serif;
+  --spacing: 20px;
+}
+
+html, body, #root, .App {
+  height: 100%;
+  margin: 0;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+}
+
+
+body{
+    background-color:var(--primary-color);
+    font-family: var(--font-main);
+}
+
+#navbar {
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    padding: 10px 20px;
+    align-items: center;
+}
+
+#navbar a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--card-bg);
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+#navbar a:hover {
+    background-color: var(--hover-color);
+}
+
+h1, p, form, h2, a, li, ul, h3, button{
+    color: var(--terciary-color);
+}
+
+h1{
+    text-align: center;
+    font-size: 3em;
+}
+
+.caixa-de-pesquisa {
+  max-width: 500px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.caixa-de-pesquisa h2 {
+  margin-bottom: 20px;
+  color: var(--terciary-color);
+}
+
+.caixa-de-pesquisa form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.caixa-de-pesquisa input {
+  padding: 8px 12px;
+  flex: 1;
+  border: none;
+}
+
+.caixa-de-pesquisa button {
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--secondary-color);
+  color:var(--terciary-color);
+  font-weight: bold;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.caixa-de-pesquisa button:hover {
+  background-color: var(--hover-color)
+}
+
+ul{
+    list-style: none;
+}
+
+.galeria {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  gap: 40px;
+  padding: 20px;
+}
+
+.card-filme {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 400px;
+  padding: 10px;
+}
+
+.card-filme img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+
+.card-filme img:hover {
+  transform: scale(1.05);
+}
+
+.sem-imagem {
+  width: 100%;
+  height: 70%;
+  background-color: var(--terciary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--terciary-color);
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.card-filme h3 {
+  margin: 10px 0 5px;
+  font-size: 1em;
+  text-align: center;
+}
+
+.card-filme button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--secondary-color);
+  color: var(--terciary-color);
+  cursor: pointer;
+}
+
+.card-filme button:hover {
+  background-color: var(--hover-color);
+}
+
+#footer {
+  background-color: var(--secondary-color);
+  text-align: center;
+  padding: 20px;
+  font-weight: bold;
+}
+
+#footer p {
+  color: var(--card-bg);
+}
+.detalhes-filme {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.detalhes-filme h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.detalhes-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.detalhes-filme img {
+  width: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.sem-imagem {
+  width: 300px;
+  height: 450px;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.detalhes-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.detalhes-info p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.botoes {
+  display: flex;
+  gap: 4px;
+}
+
+.paginacao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.paginacao button {
+  padding: 8px 16px;
+  border: none;
+  background-color: var(--secondary-color);
+  color: var(--terciary-color);
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.paginacao button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.paginacao button:hover:not(:disabled) {
+  background-color: var(--hover-color);
+}
+
+.paginacao span {
+  font-weight: bold;
+  color: var(--terciary-color);
+}
+
+.home {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.1; /* Efeito para deixar o banner de fundo da home ligeiramente transparente */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  color: var(--text-light);
+  margin: 100px;
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8), 0 0 10px rgba(226,187,179,0.5);
+}
+.title-fav{
+  color: var(--text-light);
+  margin-top: 20px;
+}
+
+.btn-delete {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+#pesquisar-titulo{
+  font-size: 3em;
+  padding: 20px;
+  color: var(--text-light);
+  margin-top: 5%;
+}
+
+#loading{
+  padding: 10px;
+  font-weight: bold;
+}
+
+.btn-voltar-favoritos {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.btn-cinema {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--secondary-color);
+  color: var(--terciary-color);
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+
+.btn-cinema:hover {
+  background-color: var(--hover-color);
+  color: var(--primary-color);
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.6);
+}
+
+/* Favorito ativo */
+.btn-cinema.ativo {
+  background-color: var(--accent-color);
+  color: var(--terciary-color); 
+}
+
+.fav-text{
+  color: var(--text-light);
+  margin-top: 30px;
+  padding: 30px;
+  font-weight: bold;
+  font-size: 1.5em;
+}
